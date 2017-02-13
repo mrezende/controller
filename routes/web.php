@@ -14,3 +14,19 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/editoras', 'EditoraController@index');
+
+Route::get('/editoras/cria', 'EditoraController@cria');
+
+Route::post('/editoras', 'EditoraController@armazena');
+
+Route::get('/livros', 'LivroController@index');
+
+Route::get('/livros/cria', 'LivroController@cria');
+
+Route::post('/livros', 'LivroController@armazena');
+
+Route::get('/livros/{livro}/edita', 'LivroController@edita');
+
+Route::patch('/livros/{livro}', 'LivroController@atualiza');
